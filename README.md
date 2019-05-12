@@ -1,4 +1,13 @@
-# IS7033
-Pytorch and other code projects developed for UTSA Spring 2019 IS7033 Seminar
+# IS7033 Project - Drug Discovery Model
+
+### Introduction
+
+### Methodology
+
+### Results
+
+### Conclusion
+
+### References
 
 
