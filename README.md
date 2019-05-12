@@ -13,7 +13,7 @@
 [IDG-DREAM Challenge](https://www.synapse.org/#!Synapse:syn15667962)
 
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/images/github-10-16.png)
 ![Second logo](https://www.kisspng.com/png-computer-icons-github-github-logo-save-icon-format-611369/download-png.html)
 Format: ![Alt Text](url)
 
