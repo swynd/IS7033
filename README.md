@@ -14,7 +14,7 @@
 
 
 ![GitHub Logo](/images/logo.png)
-![Second logo](https://images.app.goo.gl/EpF48E3yxTdS9LzJ8)
+![Second logo](https://www.kisspng.com/png-computer-icons-github-github-logo-save-icon-format-611369/download-png.html)
 Format: ![Alt Text](url)
 
 
