@@ -14,7 +14,7 @@
 
 
 ![GitHub Logo](/images/logo.png)
-![Second logo](https://images.app.goo.gl/2F3kJy5qzCfjyjCD9)
+![Second logo](https://images.app.goo.gl/EpF48E3yxTdS9LzJ8)
 Format: ![Alt Text](url)
 
 
