@@ -12,6 +12,7 @@ The [IDG-DREAM Challenge](https://www.synapse.org/#!Synapse:syn15667962) [1] was
 ### References
 
 [1] [IDG-DREAM Challenge website - https://www.synapse.org/#!Synapse:syn15667962](https://www.synapse.org/#!Synapse:syn15667962)
+
 [2] [Cichonska et al. Computational-experimental approach to drug-target interaction mapping: A case study on kinase inhibitors.](https://www.ncbi.nlm.nih.gov/pubmed/28787438) PLoS Comput Biology 2017;13:e1005678.
 [3] []()
 
