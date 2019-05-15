@@ -43,11 +43,9 @@ scaling:        0.5
 ```
 The mean squared error of this model was 0.0521. After trying many different values for the number of hidden layers, it was clear that fewer layers was more efficient for the training of this model, as the optimal number of hidden layers was two. Adding dropout after the first layer did increase the performance of the model, the ratio of 0.2 was sufficient to impact the model. 
 
-### Analysis
-
-
 ### Conclusion
-
+This model was able to achieve a considerable accuracy when predicting the binding affinity between various drugs and proteins. All things considered, the problem is a relatively simple one, and only required a simple model to achieve valuable results. However, to improve this model further, and to obtain more nuanced insight into how and why drug molecules interact with proteins, it would be valuable to expand the scope of this model to look at protein structure more completely.
+One potential strategy to evaluate protein structure is to feed the sequences into a recurrent neural network, to allow for more interactions between amino acids that are further apart than two or three spaces apart. Furthermore, an RNN would allow for compounding of impacts when three or four amino acids are present in a sequence. Another potential strategy for evaluating the structure of a protein is to treat protein sequence like a sentence, and evaluate the amino acids or groups of amino acids as words in the sentence, and evaluate "word" embeddings based on the population of protein sequences available. The upside of these analyses goes way beyond understanding interactions with drug molecules, and is a very exciting field to investigate further, and will be the main focus of study for my independent study for the foreseeable future. 
 
 ### References
 
@@ -55,4 +53,4 @@ The mean squared error of this model was 0.0521. After trying many different val
 
 [2] [Cichonska et al. Computational-experimental approach to drug-target interaction mapping: A case study on kinase inhibitors.](https://www.ncbi.nlm.nih.gov/pubmed/28787438) PLoS Comput Biology 2017;13:e1005678.
 
-[3] [Dissociation constant](https://en.wikipedia.org/wiki/Dissociation_constant)
+[3] [Dissociation constant](https://en.wikipedia.org/wiki/Dissociation_constant) Wikipedia
