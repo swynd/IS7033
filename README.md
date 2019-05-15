@@ -15,17 +15,32 @@ When the drug and protein interact, because drug molecules are not much larger t
 It was unclear what architecture would work best for this data set, a strategy was devised to test as many parameters and as many model architectures as possible. To be able to implement these parameters and architectures, a configuration file structure was created that could house all of the parameters, count of hidden layers, and other relevant model characteristics. The configuration files have the following structure in a json format:
 ```python
 params = {
-    'batch_size': int,          # batch size used during each step
-    'epochs': int,              # number of epochs to run the model
-    'learning_rate': float,     # learning rate to feed into the optimizer
-    'optimizer': string,        # which optimizer to use
-    'hidden_layers': int,       # number of hidden layers to use
-    'dropout': float,           # ratio of nodes to drop after first hidden layer
-    'hidden_act': string,       # activation function for hidden layers
-    'output_act': string,       # activation function for output layer
-    'scaling': float            # ratio to scale down node count with each layer
+    'batch_size': int,          # batch size used during each step              100, 200, 300, 400 
+    'epochs': int,              # number of epochs to run the model             50, 100, 150
+    'learning_rate': float,     # learning rate to feed into the optimizer      0.001, 0.0001
+    'optimizer': string,        # which optimizer to use                        'adam', 'rmsprop'
+    'hidden_layers': int,       # number of hidden layers to use                2, 3, 4, 5, 6, 7
+    'dropout': float,           # ratio of nodes to drop after first  layer     0.2, 0.4, 0.6
+    'hidden_act': string,       # activation function for hidden layers         'relu', 'tanh', 'sigmoid'
+    'output_act': string,       # activation function for output layer          'relu', 'sigmoid'
+    'scaling': float            # ratio to scale node count in each layer       0.5, 0.6
 }
 ```
+Creating the configuration files made it very simple to tweak one or a few parameters at a time to evaluate their impact on the training of the model. The range of parameters evaluated in each of the parameters is seen to the right of the description above. After evaluating many different permutations of these parameters, the model with the lowest mean squared error was identified, and had the following parameters:
+```python
+batch_size:     300
+epochs:         50
+learning_rate:  0.001
+optimizer:      'adam'
+hidden_layers:  2
+dropout:        0.2
+hidden_act:     'tanh'
+output_act:     'relu'
+scaling: 0.5
+```
+
+
+
 
 
 ### Results
