@@ -10,6 +10,7 @@ Kd = [Concentration of protein] . [Concentration of drug] / [Concentration of pr
 Using this metric, drug-protein interactions with a very high Kd do not bind very strongly, but drug-protein interaction with very low Kd have a higher affinity for eachother and therefore are more likely to bond strongly. This high affinity can often mean that the drug will have some ability to bind to and disrupt the protein function. The model discussed in this paper takes a dataset created by the IDG-DREAM Challenge team with Kd values for 47,000+ drug-protein interactions, including the amino acid sequence of the protein and a binary representation of the drug molecule. 
 
 ### Methodology
+When the drug and protein interact, because drug molecules are not much larger than one or two amino acids, it is very likely that the drug will interact with two or three consecutive amino acids in the protein, and maybe four consecutive amino acids in some extreme cases. To create features to reflect these consecutive amino acids, we pulled pairs of amino acids that were consecutive in the sequence, or were separated by one or two amino acids. These pairs were then converted to one-hot encoding (224 columns for each of the three sets of pairs) to feed in to the model and represented the protein sequence amino acids. The drugs did no require any transformation, as the drugs were stored as binary numerals, 920 digits long, which were representative of the atoms, bonds, and strucutre of the drugs. The final training dataset had 1,592 columns with 47,235 drug-protein interactions. 
 
 ### Results
 
@@ -21,7 +22,9 @@ Using this metric, drug-protein interactions with a very high Kd do not bind ver
 
 [2] [Cichonska et al. Computational-experimental approach to drug-target interaction mapping: A case study on kinase inhibitors.](https://www.ncbi.nlm.nih.gov/pubmed/28787438) PLoS Comput Biology 2017;13:e1005678.
 
-[3] []()
+[3] [Dissociation constant](https://en.wikipedia.org/wiki/Dissociation_constant)
+
+[4] []()
 
 
 
