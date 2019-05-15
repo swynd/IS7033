@@ -1,6 +1,7 @@
 # IS7033 Project - Drug Discovery Model
 
 ### Introduction
+The [IDG-DREAM Challenge](https://www.synapse.org/#!Synapse:syn15667962) [1] was created to bring in competitors to design models to predict drug capabilities to provide biomedical scientists some computational insight for valuable targets for further research. The focus of this competition is on drugs that inhibit Kinase protein activity within the biological cell. Kinase proteins main functions are to interact with other molecules (usually proteins) to impact their enzyme activity, location within the cell, or how they interact with other proteins [2]. 
 
 ### Methodology
 
@@ -9,6 +10,10 @@
 ### Conclusion
 
 ### References
+
+[1] [IDG-DREAM Challenge website - https://www.synapse.org/#!Synapse:syn15667962](https://www.synapse.org/#!Synapse:syn15667962)
+[2] [Cichonska et al. Computational-experimental approach to drug-target interaction mapping: A case study on kinase inhibitors.](https://www.ncbi.nlm.nih.gov/pubmed/28787438) PLoS Comput Biology 2017;13:e1005678.
+[3] []()
 
 [IDG-DREAM Challenge](https://www.synapse.org/#!Synapse:syn15667962)
 
