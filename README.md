@@ -10,7 +10,7 @@ Kd = [Concentration of protein] . [Concentration of drug] / [Concentration of pr
 Using this metric, drug-protein interactions with a very high Kd do not bind very strongly, but drug-protein interaction with very low Kd have a higher affinity for eachother and therefore are more likely to bond strongly. This high affinity can often mean that the drug will have some ability to bind to and disrupt the protein function. The model discussed in this paper takes a dataset created by the IDG-DREAM Challenge team with Kd values for 47,000+ drug-protein interactions, including the amino acid sequence of the protein and a binary representation of the drug molecule. 
 
 ### Methodology
-When the drug and protein interact, because drug molecules are not much larger than one or two amino acids, it is very likely that the drug will interact with two or three consecutive amino acids in the protein, and maybe four consecutive amino acids in some extreme cases. To create features to reflect these consecutive amino acids, we pulled pairs of amino acids that were consecutive in the sequence, or were separated by one or two amino acids. These pairs were then converted to one-hot encoding (224 columns for each of the three sets of pairs) to feed in to the model and represented the protein sequence amino acids. The drugs did no require any transformation, as the drugs were stored as binary numerals, 920 digits long, which were representative of the atoms, bonds, and strucutre of the drugs. The final training dataset had 1,592 columns with 47,235 drug-protein interactions. 
+When the drug and protein interact, because drug molecules are not much larger than one or two amino acids, it is very likely that the drug will interact with two or three consecutive amino acids in the protein, and maybe four consecutive amino acids in some extreme cases. To create features to reflect these consecutive amino acids, we pulled pairs of amino acids that were consecutive in the sequence, or were separated by one or two amino acids. These pairs were then converted to one-hot encoding (224 columns for each of the three sets of pairs) to feed in to the model and represented the protein sequence amino acids. The drugs did no require any transformation, as the drugs were stored as binary numerals, 920 digits long, which were representative of the atoms, bonds, and strucutre of the drugs. The final training dataset had 1,592 columns with 47,235 drug-protein interactions. This data set was split into a train and test set, with 85% of the interactions being used to train, and 15% being held back to test the model.
 
 It was unclear what architecture would work best for this data set, a strategy was devised to test as many parameters and as many model architectures as possible. To be able to implement these parameters and architectures, a configuration file structure was created that could house all of the parameters, count of hidden layers, and other relevant model characteristics. The configuration files have the following structure in a json format:
 ```python
@@ -26,7 +26,10 @@ params = {
     'scaling': float            # ratio to scale node count in each layer       0.5, 0.6
 }
 ```
-Creating the configuration files made it very simple to tweak one or a few parameters at a time to evaluate their impact on the training of the model. The range of parameters evaluated in each of the parameters is seen to the right of the description above. After evaluating many different permutations of these parameters, the model with the lowest mean squared error was identified, and had the following parameters:
+Creating the configuration files made it very simple to tweak one or a few parameters at a time to evaluate their impact on the training of the model. The range of parameters evaluated in each of the parameters is seen to the right of the description above. 
+
+### Results
+After evaluating many different permutations of these parameters, the model with the lowest mean squared error was identified, and had the following parameters:
 ```python
 batch_size:     300
 epochs:         50
@@ -36,14 +39,10 @@ hidden_layers:  2
 dropout:        0.2
 hidden_act:     'tanh'
 output_act:     'relu'
-scaling: 0.5
+scaling:        0.5
 ```
 
-
-
-
-
-### Results
+### Analysis
 
 ### Conclusion
 
