@@ -12,6 +12,23 @@ Using this metric, drug-protein interactions with a very high Kd do not bind ver
 ### Methodology
 When the drug and protein interact, because drug molecules are not much larger than one or two amino acids, it is very likely that the drug will interact with two or three consecutive amino acids in the protein, and maybe four consecutive amino acids in some extreme cases. To create features to reflect these consecutive amino acids, we pulled pairs of amino acids that were consecutive in the sequence, or were separated by one or two amino acids. These pairs were then converted to one-hot encoding (224 columns for each of the three sets of pairs) to feed in to the model and represented the protein sequence amino acids. The drugs did no require any transformation, as the drugs were stored as binary numerals, 920 digits long, which were representative of the atoms, bonds, and strucutre of the drugs. The final training dataset had 1,592 columns with 47,235 drug-protein interactions. 
 
+It was unclear what architecture would work best for this data set, a strategy was devised to test as many parameters and as many model architectures as possible. To be able to implement these parameters and architectures, a configuration file structure was created that could house all of the parameters, count of hidden layers, and other relevant model characteristics. The configuration files have the following structure in a json format:
+
+```python
+params = {
+    'batch_size': 300,          # batch size used during each step
+    'epochs': 50,               # number of epochs to run the model
+    'learning_rate': 0.001,     # learning rate to feed into the optimizer
+    'optimizer': 'adam',        # which optimizer to use
+    'hidden_layers': 2,         # number of hidden layers to use
+    'dropout': 0.2,             # ratio of nodes to drop after first hidden layer
+    'hidden_act': 'sigmoid',    # activation function for hidden layers
+    'output_act': 'relu',       # activation function for output layer
+    'scaling': 0.5              # ratio to scale down node count with each layer
+}
+```
+
+
 ### Results
 
 ### Conclusion
