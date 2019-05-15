@@ -41,10 +41,13 @@ hidden_act:     'tanh'
 output_act:     'relu'
 scaling:        0.5
 ```
+The mean squared error of this model was 0.0521. After trying many different values for the number of hidden layers, it was clear that fewer layers was more efficient for the training of this model, as the optimal number of hidden layers was two. Adding dropout after the first layer did increase the performance of the model, the ratio of 0.2 was sufficient to impact the model. 
 
 ### Analysis
 
+
 ### Conclusion
+
 
 ### References
 
@@ -53,53 +56,3 @@ scaling:        0.5
 [2] [Cichonska et al. Computational-experimental approach to drug-target interaction mapping: A case study on kinase inhibitors.](https://www.ncbi.nlm.nih.gov/pubmed/28787438) PLoS Comput Biology 2017;13:e1005678.
 
 [3] [Dissociation constant](https://en.wikipedia.org/wiki/Dissociation_constant)
-
-[4] []()
-
-
-
-
-
-
-
-
-![GitHub Logo](/images/github-10-16.png)
-![GitHub Logo](/images/github-icon-vector-27.jpg)
-![Second logo](https://www.kisspng.com/png-computer-icons-github-github-logo-save-icon-format-611369/download-png.html)
-Format: ![Alt Text](url)
-
-
-
-http://github.com - automatic!
-[GitHub](http://github.com)
-
-
-
-As Kanye West said:
-
-> We're living the future so
-> the present is our past.
-
-
-
-I think you should use an
-`<addr>` element here instead.
-
-
-
-```python
-def foo():
-    if not bar:
-        return True
-```
-
-
-    def foo():
-        if not bar:
-            return True
-
-
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
